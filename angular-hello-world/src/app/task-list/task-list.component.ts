@@ -11,7 +11,8 @@ export class TaskListComponent {
   taks = [];
   task: Task = {
     name: '',
-    value: 0
+    value: 0,
+    dateLaunch: ''
   };
 
   add() {
