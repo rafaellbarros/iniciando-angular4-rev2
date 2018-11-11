@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../task';
 
 @Component({
   selector: 'task-list',
@@ -8,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class TaskListComponent {
 
   taks = [];
-  task = '';
+  task: Task = {
+    name: '',
+    value: 0
+  };
 
   add() {
-    this.taks.push(this.task);
+    const task = Object.assign({}, this.task);
+    this.taks.push(task);
   }
 
 }

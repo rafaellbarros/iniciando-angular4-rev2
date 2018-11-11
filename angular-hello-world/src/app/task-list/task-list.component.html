@@ -1,7 +1,20 @@
-<input type="text" [(ngModel)]="task">
+<label>Name:</label>
+<input type="text" [(ngModel)]="task.name">
+<br />
+<label>Value:</label>
+<input type="text"[(ngModel)]="task.value">
+<br />
 <button type="button" (click)="add()">Adicionar na lista</button>
 <ul>
-  <li *ngFor="let item of taks">
-    {{ item }}
+  <li
+    [id]="'list-' + item.name"
+    [style.color]="item.value > 5 ? 'green' : 'red'"
+    *ngFor="let item of taks" [innerHTML]="item.name + '-' + item.value">
+  </li>
+  <li
+    [id]="'list-' + item.name"
+    class="teste"
+    [ngClass]="{'item-green':item.value > 5, 'item-red': item.value < 5}"
+    *ngFor="let item of taks" [innerHTML]="item.name + '-' + item.value">
   </li>
 </ul>
