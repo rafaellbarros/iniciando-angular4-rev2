@@ -9,7 +9,7 @@
 <br />
 <button type="button" (click)="add()">Adicionar na lista</button>
 <ul>
-  <li *ngFor="let item of taks">
+  <li *ngFor="let item of taks" [myTask]="item">
     {{item.name}} - {{item.value | formatCurrency: 'en-US':'USD' }} - {{item.dateLaunch | formatDate:'en-US' }}
   </li>
   <!-- <li *ngFor="let item of taks" [innerHTML]="item.name | lowercase"></li> -->
@@ -27,3 +27,4 @@
   </li>
   -->
 </ul>
+<p myTask></p>
