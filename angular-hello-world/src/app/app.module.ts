@@ -1,3 +1,4 @@
+import { TaskService } from './task.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -6,6 +7,7 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { FormatCurrencyPipe } from './format-currency.pipe';
 import { FormatDatePipe } from './format-date.pipe';
 import { MyTaskDirective } from './my-task.directive';
+import { TaskNewComponent } from './task-new/task-new.component';
 
 @NgModule({
   declarations: [
@@ -13,13 +15,14 @@ import { MyTaskDirective } from './my-task.directive';
     TaskListComponent,
     FormatCurrencyPipe,
     FormatDatePipe,
-    MyTaskDirective
+    MyTaskDirective,
+    TaskNewComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,17 +1,11 @@
-<label>Name:</label>
-<input type="text" [(ngModel)]="task.name">
-<br />
-<label>Value:</label>
-<input type="text"[(ngModel)]="task.value">
-<br />
-<label>Value:</label>
-<input type="text"[(ngModel)]="task.dateLaunch">
-<br />
-<button type="button" (click)="add()">Adicionar na lista</button>
+
 <ul>
-  <li *ngFor="let item of taks" [myTask]="item">
-    {{item.name}} - {{item.value | formatCurrency: 'en-US':'USD' }} - {{item.dateLaunch | formatDate:'en-US' }}
+  <li *ngFor="let item of tasks" [myTask]="item">
+    {{item.name}} -
+    {{item.value | formatCurrency: 'en-US':'USD' }} -
+    {{item.dateLaunch | formatDate:'en-US' }}
   </li>
+</ul>
   <!-- <li *ngFor="let item of taks" [innerHTML]="item.name | lowercase"></li> -->
   <!--
   <li
@@ -26,5 +20,4 @@
     *ngFor="let item of taks" [innerHTML]="item.name + '-' + item.value">
   </li>
   -->
-</ul>
-<p myTask></p>
+  <!-- <p myTask></p> -->
