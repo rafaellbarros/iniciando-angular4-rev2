@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CepComponent } from './cep/cep.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CepComponent
   ],
   imports: [
     BrowserModule
