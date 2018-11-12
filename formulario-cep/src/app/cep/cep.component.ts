@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-cep',
+  selector: 'cep',
   templateUrl: './cep.component.html',
   styleUrls: ['./cep.component.css']
 })
