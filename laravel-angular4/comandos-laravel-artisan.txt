@@ -1,8 +1,9 @@
 // criando um model
 php artisan make:model Task -m
-// migrando o modelo 
+// migrando o modelo
 php artisan migrate
 // criando um controller --resource
 php artisan make:controller  TasksController --resource
 // startando o servidor
 php artisan serve
+
