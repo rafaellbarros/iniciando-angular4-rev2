@@ -1,0 +1,13 @@
+// criando um model
+php artisan make:model Estado -m
+php artisan make:model Cidade -m
+// migrando o modelo
+php artisan migrate
+// startando o servidor
+php artisan serve
+// populando as tabelas no banco
+php artisan migrate:refresh --seed
+// comando para resolver problema autoload das classes seed
+php composer dump-autoload
+// criando um controller
+php artisan make:controller  CidadeController

@@ -1,0 +1,6 @@
+<select name="estado" (change)="getCidades()" [(ngModel)]="estado">
+  <option *ngFor="let estado of estados" [value]="estado.id">{{estado.estado}}</option>
+</select>
+<select name="cidade" *ngIf="estado">
+  <option *ngFor="let cidade of cidades" [value]="cidade.id">{{cidade.cidade}}</option>
+</select>

@@ -1,0 +1,5 @@
+// compilando a aplicacao angular em um path especifico
+ng build --output-path=./../../../public/js
+
+// compilando em modo de escuta
+ng build --output-path=./../../../public/js --watch
